@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:40px;
+    margin-left: 100px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.menu-link{
+    color: $color-primary;
+    font-family: $font-familly;
+    font-weight: 500;
+    font-size: 24px;
+    font-style: normal;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    margin-right: 75px;
+ 
+}
+
+
+
+
+

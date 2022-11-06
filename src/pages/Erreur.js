@@ -1,12 +1,14 @@
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 function Error () {
     return (
         <div>
             <Header />
-            <div>Error</div>
-            <Footer />
+            <div className="error-container">
+               <div className="error404">404</div>  
+               <span className="error-info">Oups! La page que vous demandez n'existe pas.</span>
+               <a href= "#" className="error-link">Retourner sur la page d’accueil</a>
+            </div>
         </div>
     )
 }
