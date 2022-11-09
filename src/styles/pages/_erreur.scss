@@ -1,50 +1,34 @@
-
-.error-container{
+.error-container {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin-top: 4em;
 }
-.error404{
-    position: absolute;
-    width: 597px;
-    height: 263px;
-    left: 432px;
-    top: 100px;
-    font-family: $font-familly;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 288px;
-    line-height: 142.6%;
-    color:$color-primary;
 
+.error-code {
+    font-family: $font-familly;
+    font-weight: 700;
+    font-size: 250px;
+    color: $color-primary;
 }
-.error-info{
-    position: absolute;
-    left: 20.49%;
-    right: 18.96%;
-    top: 70%;
-    bottom: 35.84%;
+
+.error-info {
     font-family: $font-familly;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
-    line-height: 142.6%;
-    display: flex;
-    align-items: flex-end;
     color: $color-primary;
+    margin-bottom: 3em;
 }
-.error-link{
-    position: absolute;
-    left: 40.14%;
-    right: 40.14%;
-    top: 90%;
-    bottom: 15.53%;
+
+.error-link {
     font-family: $font-familly;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 142.6%;
-    display: flex;
-    align-items: flex-end;
     text-decoration-line: underline;
     color: $color-primary;
 }
+
+// @media screen and (max-width:480px) {
+// }

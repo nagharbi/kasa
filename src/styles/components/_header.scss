@@ -1,18 +1,18 @@
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top:40px;
+    margin-top: 40px;
     margin-left: 100px;
 }
 
-.menu{
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
-.menu-link{
+
+.menu-link {
     color: $color-primary;
     font-family: $font-familly;
     font-weight: 500;
@@ -22,10 +22,11 @@
     align-items: flex-end;
     text-align: right;
     margin-right: 75px;
- 
 }
 
-
-
-
-
+@media screen and (max-width:480px) {
+    .logo{
+        position: absolute;
+        right: 56.72%;
+    }
+}

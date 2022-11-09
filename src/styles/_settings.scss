@@ -1,7 +1,9 @@
-$color-primary:#FF6060 ;
-$font-familly:"Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 
-*{
+$color-primary:#FF6060 ;
+$font-familly: "Montserrat", sans-serif;
+
+* {
     text-decoration: none;
     list-style-type: none;
 }

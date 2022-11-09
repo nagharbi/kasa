@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Header from "../components/Header";
 
 function Error () {
@@ -5,9 +6,11 @@ function Error () {
         <div>
             <Header />
             <div className="error-container">
-               <div className="error404">404</div>  
+               <div className="error-code">404</div>  
                <span className="error-info">Oups! La page que vous demandez n'existe pas.</span>
-               <a href= "#" className="error-link">Retourner sur la page d’accueil</a>
+               <NavLink className="error-link" to="/" exact="true">
+                    Retourner sur la page d’accueil
+               </NavLink>
             </div>
         </div>
     )
