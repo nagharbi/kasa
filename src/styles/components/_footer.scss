@@ -1,22 +1,34 @@
 .footer {
     position: absolute;
     width: 100%;
-    height: 200px;
-    margin-top: 2em; 
+    height:pxToRem(200px);
     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include tablet{
+        margin-top: pxToRem(32px);
+    }
 }
 
 .logo-footer {
-    width: 120px;
-    margin-bottom: 1em;
+    width: pxToRem(80px);
+    margin-bottom: pxToRem(16px);
+    @include tablet{
+        width: pxToRem(120px);
+    }
+
 }
 
 .textefooter {
     color: white;
     font-family: $font-familly;
-    font-size: 20px;
+    font-size: pxToRem(12px);
+    @include tablet{
+        font-size: pxToRem(20px);
+    }
 }

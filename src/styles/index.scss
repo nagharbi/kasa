@@ -1,4 +1,6 @@
 @import './settings'; 
+@import './utils/functions';
+@import './utils/mixins';
 @import './components/header';
 @import './components/footer';
 @import './pages/erreur';

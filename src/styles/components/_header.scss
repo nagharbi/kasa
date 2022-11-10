@@ -2,8 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-left: 100px;
+    margin-top: pxToRem(40px);
+    margin-left: pxToRem(20px);
+    @include tablet {
+        margin-left: pxToRem(100px);
+    }
 }
 
 .menu {
@@ -16,17 +19,31 @@
     color: $color-primary;
     font-family: $font-familly;
     font-weight: 500;
-    font-size: 24px;
+    font-size: pxToRem(12px);
     font-style: normal;
     display: flex;
     align-items: flex-end;
     text-align: right;
-    margin-right: 75px;
-}
+    margin-right: pxToRem(16px);
+    width: pxToRem(59px);
+    height: pxToRem(17px);
 
-@media screen and (max-width:480px) {
-    .logo{
-        position: absolute;
-        right: 56.72%;
+    @include tablet {
+        font-size: pxToRem(24px);
+        margin-right: pxToRem(50px);
+        width: auto;
+        height: auto;
+    }
+}
+.logo > img {
+width: pxToRem(120px);
+height: pxToRem(47px);
+    @include tablet{
+        width: pxToRem(150px);
+        height: pxToRem(60px);
+    }
+    @include desktop{
+        width: auto;
+        height: auto;
     }
 }

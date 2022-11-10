@@ -2,33 +2,43 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 4em;
+    margin-top: pxToRem(32px);
+    @include tablet{
+        margin-top: pxToRem(64px);
+    }
 }
 
 .error-code {
     font-family: $font-familly;
     font-weight: 700;
-    font-size: 250px;
+    font-size: pxToRem(100px);
     color: $color-primary;
+    @include tablet{
+        font-size: pxToRem(250px);
+    }
+
 }
 
 .error-info {
     font-family: $font-familly;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: pxToRem(16px);
     color: $color-primary;
-    margin-bottom: 3em;
+    margin-bottom: pxToRem(48px);
+    @include tablet{
+        font-size: pxToRem(36px);
+    }
 }
 
 .error-link {
     font-family: $font-familly;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: pxToRem(12px);
     text-decoration-line: underline;
     color: $color-primary;
+    @include tablet{
+        font-size: pxToRem(18px);
+    }
 }
-
-// @media screen and (max-width:480px) {
-// }
