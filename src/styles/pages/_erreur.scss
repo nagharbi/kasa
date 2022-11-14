@@ -9,18 +9,17 @@
 }
 
 .error-code {
-    font-family: $font-familly;
+    font-family: $font-family;
     font-weight: 700;
     font-size: pxToRem(100px);
     color: $color-primary;
     @include tablet{
         font-size: pxToRem(250px);
     }
-
 }
 
 .error-info {
-    font-family: $font-familly;
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: pxToRem(16px);
@@ -32,7 +31,7 @@
 }
 
 .error-link {
-    font-family: $font-familly;
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: pxToRem(12px);

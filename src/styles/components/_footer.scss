@@ -1,7 +1,7 @@
 .footer {
     position: absolute;
     width: 100%;
-    height:pxToRem(200px);
+    height: pxToRem(200px);
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
 
 .textefooter {
     color: white;
-    font-family: $font-familly;
+    font-family: $font-family;
     font-size: pxToRem(12px);
     @include tablet{
         font-size: pxToRem(20px);

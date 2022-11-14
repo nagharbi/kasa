@@ -1,0 +1,42 @@
+.banniere {
+    display: flex;
+    @include tablet {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.banniere > img {
+    width: 100%;
+    min-height: pxToRem(110px);
+    max-height: pxToRem(180px);
+    object-fit: cover;
+    object-position: revert;
+    border-radius: pxToRem(15px);
+    filter: brightness(0.7);
+}
+
+.banniere > h2 {
+    position: absolute;
+    margin-left: pxToRem(25px);
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 400;
+    color:white;
+    @include tablet {
+        font-weight: 500;
+        font-size: pxToRem(27px);
+    }
+    @include desktop {
+        font-size: pxToRem(40px);
+    }
+}
+
+.banniere > h2 > span {
+    display: block;
+    @include tablet {
+        display: inline-block;
+    }
+}
+
+

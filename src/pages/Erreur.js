@@ -1,18 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Header from "../components/Header";
+import Footer from '../components/Footer';
 
-function Error () {
+function Error (props) {
+    let message = (props.code === '404') ? "Oups! La page que vous demandez n'existe pas." : "Oups! Erreur serveur survenu!";
     return (
         <div>
             <Header />
             <div className="error-container">
-               <div className="error-code">404</div>  
-               <span className="error-info">Oups! La page que vous demandez n'existe pas.</span>
+               <div className="error-code">{props.code}</div>  
+               <span className="error-info">{message}</span>
                <NavLink className="error-link" to="/" exact="true">
                     Retourner sur la page d’accueil
                </NavLink>
             </div>
+            <Footer />
         </div>
     )
 }
