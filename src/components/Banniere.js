@@ -1,11 +1,11 @@
 import React from "react";
 import homeImg from '../images/home.png';
 
-function Banniere () {
+function Banniere (props) {
     return (
         <div className='banniere'>
-            <img src={homeImg} alt="montagne"/>
-            <h2>Chez vous, <span>partout et ailleurs</span></h2>
+            <img src={props.img} alt="paysage"/>
+            { props.title ? <h2>{props.title}, <span>{props.subtitle}</span></h2> : <> </>}
         </div> 
     );
 }

@@ -1,11 +1,15 @@
 import React from "react";
+import Banniere from "../components/Banniere";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import imgapropos from "../images/apropos.png";
 
 function Apropos(){
     return (
         <div>
             <Header/>
-            <div>A propos</div>
+            <Banniere img={imgapropos}/>
+            <Footer/>
         </div>
     );
 }
