@@ -9,9 +9,8 @@ function Home() {
     return (
         <div>
             <Header />
-            <Banniere img={homeImg} title="Chez vous " subtitle ="partout et ailleurs" />
-            
-            {/* <Thumb/> */}
+            <Banniere img={homeImg} title="Chez vous, " subtitle ="partout et ailleurs" />
+            <Thumb />
             <Footer />
         </div>
     );
