@@ -1,17 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
         <div className='navbar'>
-            <div className='logo'>
+
+            <NavLink className='logo' to="/" exact="true">
                 <img alt= "logo-kasa" src= "../LOGO.svg"/>
-            </div>
+            </NavLink>
+
             <ul className='menu'>
                 <li className='menu-link'>
-                    Acceuil
+                   <NavLink to="/" exact="true">Acceuil</NavLink>
                 </li>
                 <li className='menu-link'>
-                    A propos
+                <NavLink to="/apropos">A propos</NavLink>
                 </li>
             </ul>
         </div>

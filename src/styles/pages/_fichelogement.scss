@@ -1,0 +1,14 @@
+.house-container {
+    margin-left: pxToRem(20px);
+}
+.house-title{
+    font-family: $font-family;
+    color: $color-primary;
+    font-size:pxToRem(30px);
+    height:pxToRem(40px);
+    
+}
+.house-position{
+    font-family: $font-family;
+    color: $color-primary;
+}

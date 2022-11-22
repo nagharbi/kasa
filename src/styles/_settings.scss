@@ -11,3 +11,17 @@ $breakpoints: (
     text-decoration: none;
     list-style-type: none;
 }
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 14rem;
+}
+
+a {
+    color: inherit;
+}

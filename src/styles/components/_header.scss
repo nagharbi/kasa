@@ -4,6 +4,7 @@
     justify-content: space-between;
     margin-top: pxToRem(40px);
     margin-left: pxToRem(20px);
+    margin-bottom: pxToRem(30px);
     @include tablet {
         margin-left: pxToRem(100px);
     }

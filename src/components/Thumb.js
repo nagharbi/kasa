@@ -1,14 +1,18 @@
 import React from 'react';
-import imgThumb from '../images/imgThumb.png'
+import { NavLink } from 'react-router-dom';
+
+
 
 function Thumb (props) {
     return(
-        <article className='thumb-container'>
-            <a href='#' className='thumb'>
-                <img src={imgThumb} alt="image du thumb"/>
-                <p className='thumb-title'>Titre de la location</p>
-            </a>
-        </article>
+        <article className='thumb'>
+        <NavLink to="/logement/id1" className='thumb-link'>
+            <div className='thumb-card' style={{ backgroundImage: `url(${props.img})`}}>
+                <span className='thumb-title'>{props.title}</span>
+                <div className='thumb-bg'></div>
+            </div>
+        </NavLink>
+    </article>
     );
 }
 
