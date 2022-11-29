@@ -7,6 +7,7 @@
     margin-bottom: pxToRem(30px);
     @include tablet {
         margin-left: pxToRem(100px);
+        margin-right: pxToRem(70px);
     }
 }
 

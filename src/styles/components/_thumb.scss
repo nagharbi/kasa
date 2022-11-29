@@ -1,3 +1,10 @@
+.thumb {
+    @include tablet {
+        margin-right: pxToRem(70px);
+        margin-bottom: pxToRem(70px);
+    }
+}
+
 .thumb-main {
     width: 90%;
     border-radius: pxToRem(25px);
@@ -18,7 +25,7 @@
 
 .thumb-card {
     width: pxToRem(330px);
-    height: pxToRem(350px);
+    height: pxToRem(330px);
     display: flex;
     align-items: flex-end;
     background-size: cover;
@@ -26,6 +33,10 @@
     position: relative;
     margin-left: pxToRem(20px);
     margin-top: pxToRem(20px);
+    @include tablet {
+        width: pxToRem(400px);
+        height: pxToRem(400px);
+    }
 }
 
 .thumb-bg {

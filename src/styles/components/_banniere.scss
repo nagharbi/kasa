@@ -1,8 +1,13 @@
+
 .banniere {
     display: flex;
+    margin-left: pxToRem(20px);
+    margin-right: pxToRem(20px);
     @include tablet {
         justify-content: center;
         align-items: center;
+        margin-left: pxToRem(100px);
+        margin-right: pxToRem(100px);
     }
 }
 

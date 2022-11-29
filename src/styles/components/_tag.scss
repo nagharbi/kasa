@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @include tablet {
+        margin-top: pxToRem(15px);
+    }
 }
 
 .tag {
@@ -20,5 +23,12 @@
         width: pxToRem(115px);
         height: pxToRem(25px);
         border-radius: pxToRem(10px);
+    }
+}
+
+.tag-content {
+    font-size: pxToRem(10px);
+    @include tablet {
+        font-size: pxToRem(14px);
     }
 }

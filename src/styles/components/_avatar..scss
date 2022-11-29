@@ -1,0 +1,34 @@
+.avatar {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: pxToRem(15px);
+    @include tablet {
+        margin-bottom: pxToRem(30px);
+    }
+}
+
+.avatar-title {
+    width: pxToRem(93px);
+    font-weight: 500;
+    font-size: pxToRem(12px);
+    text-align: end;
+    margin-right: pxToRem(10px);
+    color: $color-primary;
+    font-family: $font-family;
+    @include tablet {
+        margin-top: pxToRem(10px);
+        font-size: pxToRem(18px);
+    }
+}
+
+.avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: gray;
+    @include tablet {
+        margin-right: pxToRem(15px);
+        width: 64px;
+        height: 64px;
+    }
+}

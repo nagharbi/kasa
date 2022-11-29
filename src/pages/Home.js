@@ -6,12 +6,12 @@ import homeImg from '../images/home.png';
 import { getAllLogement } from'../services/service';
 
 function Home() {
-    const [logements, setlogements] = useState([]);
+    const [logements, setLogements] = useState([]);
 
     useEffect(()=> {
         async function load() {
-            const data=  await getAllLogement();
-            setlogements(data);
+            const data = await getAllLogement();
+            setLogements(data);
         }
         load();
     }, []);
@@ -22,11 +22,11 @@ function Home() {
             <Banniere img={homeImg} title="Chez vous, " subtitle ="partout et ailleurs" />
             <div className='thumb-main'>
                 <div className='thumb-container'>
-                    {logements.map((item)=><Thumb key={item.id} title={item.title} img={item.cover}/>) }
+                    {logements.map((item) => <Thumb key={item.id} id={item.id} title={item.title} img={item.cover}/>)}
                 </div>
             </div>
         </div>
     );
 }
 
-export  default Home;
+export default Home;

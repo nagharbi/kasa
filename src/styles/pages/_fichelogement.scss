@@ -1,14 +1,82 @@
+.accordeon-container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: pxToRem(30px);
+    }
+
+}
+
 .house-container {
     margin-left: pxToRem(20px);
+    margin-right: pxToRem(20px);
+    @include tablet {
+        margin-left: pxToRem(100px);
+        margin-right: pxToRem(100px);
+    }
 }
-.house-title{
+
+.house-carousel {
+    margin-bottom: pxToRem(20px);
+}
+
+.house {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.house-carroussel {
+    margin-bottom: pxToRem(20px);
+}
+
+.house-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: pxToRem(15px);
+    @include tablet {
+        flex-direction: column-reverse;
+        align-items: end;
+        margin-top: inherit;
+    }
+}
+
+.stars-container {
+    margin-top: 10px;
+    @include tablet {
+        margin-top: inherit;
+    }
+}
+
+.house-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: pxToRem(50px);
+}
+
+.house-title {
     font-family: $font-family;
     color: $color-primary;
-    font-size:pxToRem(30px);
-    height:pxToRem(40px);
-    
+    font-size: pxToRem(18px);
+    margin-bottom: pxToRem(10px);
+    @include tablet {
+        font-size: pxToRem(30px);
+        height: pxToRem(40px);
+    }
 }
-.house-position{
+
+.house-position {
     font-family: $font-family;
     color: $color-primary;
+    font-size: pxToRem(14px);
+    @include tablet {
+        font-size: pxToRem(18px);
+    }
 }

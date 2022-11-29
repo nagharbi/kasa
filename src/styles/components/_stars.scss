@@ -1,0 +1,8 @@
+.star-img {
+    width: pxToRem(15px);
+    height: pxToRem(15px);
+    @include tablet {
+        width: pxToRem(30px);
+        height: pxToRem(30px);        
+    }
+}
