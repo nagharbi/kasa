@@ -7,6 +7,18 @@ function Accordeon(props) {
 		setChecked(!checked);
     };
 
+    const generateContent = () => {
+        if (Array.isArray(props.content)) {
+            return props.content.map((item, index) => (
+                <div key={index}>
+                    {item}<br></br>
+                </div>
+            ));
+        }
+
+        return props.content;
+    }
+
     return (
         <div className="accordeon">
             <input onClick={handleClick} className={`accordeon-checkbox ${checked === true ? 'checked' : ''}`} type="checkbox" id={props.id} />
@@ -14,7 +26,7 @@ function Accordeon(props) {
 			{
 				checked === true ? (
 					<div className="accordeon-content">
-						{props.content}
+						{generateContent()}
 					</div>
 				) : null
 			}

@@ -7,10 +7,9 @@ import Header from "../components/Header";
 import Stars from "../components/Stars";
 import Tag from "../components/Tag";
 import { getOneLogement } from "../services/service";
+import Error from "./Erreur";
 
 function FicheLogement() {
-  const content =
-    "Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied).";
   const params = useParams();
   const id = params.id;
   const [logement, setlogement] = useState({});
@@ -21,9 +20,9 @@ function FicheLogement() {
       setlogement(data);
     }
     load();
-  }, []);
+  }, [id]);
 
-  return (
+  return logement ? (
     <div>
       <Header />
       <div className="house-container">
@@ -34,32 +33,30 @@ function FicheLogement() {
           <div className="house-tags">
             <div className="house-content">
               <span className="house-title">
-                Cozy loft on the Canal Saint-Martin
+                {logement.title}
               </span>
-              <span className="house-position">Paris, Île-de-France</span>
+              <span className="house-position">{logement.location}</span>
             </div>
             <div className="tag-container">
-              <Tag content="Cozy" />
-              <Tag content="Canal" />
-              <Tag content="Paris 10" />
+                {logement.tags ? logement.tags.map((content, index) => <Tag key={index} content={content} />) : null}
             </div>
           </div>
           <div className="house-stars">
             <div className="stars-container">
-              <Stars rating="4" total="5" />
+              <Stars rating={logement.rating} total="5" />
             </div>
             <div className="avatar-container">
-              <Avatar title="Alexandre Dumas" />
+              <Avatar name={logement?.host?.name} picture={logement?.host?.picture} />
             </div>
           </div>
         </div>
         <div className="accordeon-container">
-          <Accordeon id="accordeon1" title="Description" content={content} />
-          <Accordeon id="accordeon2" title="Test" content={content} />
+          <Accordeon id="description" title="Dèscription" content={logement.description} />
+          <Accordeon id="equipments" title="Equipements" content={logement.equipments} />
         </div>
       </div>
     </div>
-  );
+  ) : <Error code="404"/>;
 }
 
 export default FicheLogement;

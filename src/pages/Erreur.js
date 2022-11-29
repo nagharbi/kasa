@@ -8,7 +8,7 @@ function Error (props) {
         <div>
             <Header />
             <div className="error-container">
-               <div className="error-code">{props.code}</div>  
+               <div className="error-code">{props.code || '500'}</div>
                <span className="error-info">{message}</span>
                <NavLink className="error-link" to="/" exact="true">
                     Retourner sur la page d’accueil
