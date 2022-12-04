@@ -29,10 +29,12 @@ function Carousel(props) {
             <div className="carroussel-container">
                 <img className="carroussel-img" src={currentImg} />
             </div>
-            <div className="carroussel-controls">
-                <img onClick={onPrev} src={left} className="carroussel-controls-img" alt="arrow left" />
-                <img onClick={onNext} src={right} className="carroussel-controls-img" alt="arrow right" />
-            </div>
+            {props.imgs.length > 1 ? (
+                <div className="carroussel-controls">
+                    <img onClick={onPrev} src={left} className="carroussel-controls-img" alt="arrow left" />
+                    <img onClick={onNext} src={right} className="carroussel-controls-img" alt="arrow right" />
+                </div>
+            ) : null}
             <div className="carroussel-counter">{index + 1 }/{props.imgs.length}</div>
         </div>
     );

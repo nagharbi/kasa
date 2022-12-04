@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Accordeon(props) {
-    const [checked, setChecked] = useState(true);
+    const [checked, setChecked] = useState(false);
 
     const handleClick = () => {
 		setChecked(!checked);
@@ -24,7 +24,7 @@ function Accordeon(props) {
             <label className="accordeon-label" htmlFor={props.id}>{props.title}</label>
 			{
 				checked === true ? (
-					<div className="accordeon-content">
+					<div className={`accordeon-content ${props.size}`}>
 						{generateContent()}
 					</div>
 				) : null

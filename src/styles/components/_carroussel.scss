@@ -34,8 +34,8 @@
     height: pxToRem(20px);
     cursor: pointer;
     @include tablet {
-        width: pxToRem(30px);
-        height: auto;
+        width: pxToRem(47px);
+        height: pxToRem(79px);
     }
 }
 

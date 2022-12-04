@@ -12,3 +12,16 @@
 @import './components/stars';
 @import './pages/erreur';
 @import './pages/fichelogement';
+@import './pages/apropos';
+
+.size-m {
+    @include tablet {
+        font-size: pxToRem(18px);
+    }
+}
+
+.size-l {
+    @include tablet {
+        font-size: pxToRem(24px);
+    }
+}

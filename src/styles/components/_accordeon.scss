@@ -19,23 +19,28 @@
         display: flex;
         justify-content: space-between;
         padding: pxToRem(16px);
-        font-weight: bold;
+        font-weight: 500;
         background-color: $color-primary;
         font-size: pxToRem(13px);
         border-radius: pxToRem(5px);
         font-family: $font-family;
         @include tablet {
             border-radius: pxToRem(10px);
-            font-size: pxToRem(18px);
+            font-size: pxToRem(24px);
         }
         cursor: pointer;
         &::after {
-          content: "\276F";
-          transform: rotate(-90deg);
-          width: pxToRem(16px);
+          content: "";
+          float: right;
+          width: pxToRem(32px);
           height: pxToRem(16px);
           text-align: center;
           transition: all .35s;
+          margin-top: pxToRem(7px);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url('../../../public/arrow-up.png');
         }
     }
     &-content {
@@ -45,10 +50,11 @@
         background: #F6F6F6;
         transition: all .35s;
         font-size: pxToRem(12px);
-        border-radius: 0 pxToRem(5px);
+        border-radius: 0 0 pxToRem(5px) pxToRem(5px);
+        font-family: $font-family;
+        font-weight: 400;
         @include tablet {
-          font-size: pxToRem(18px);
-          border-radius: 0 pxToRem(10px);
+          border-radius: 0 0 pxToRem(10px) pxToRem(10px);
         }
     }
 }
@@ -56,7 +62,7 @@
 .accordeon-checkbox.checked {
     + .accordeon-label {
         &::after {
-          transform: rotate(90deg);
+          transform: rotate(180deg);
         }
     }
     ~ .accordeon-content {

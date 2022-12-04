@@ -1,0 +1,10 @@
+.apropos-container {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include tablet {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+}

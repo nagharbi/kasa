@@ -1,6 +1,6 @@
 async function getAllLogement() {
-  const reponse = await fetch(process.env.PUBLIC_URL + "/data/logement.json");
-  const data = await reponse.json();
+  const response = await fetch(process.env.PUBLIC_URL + "/data/logement.json");
+  const data = await response.json();
   return data;
 }
 
@@ -10,4 +10,10 @@ async function getOneLogement(id) {
   return logement;
 }
 
-export { getAllLogement, getOneLogement };
+async function getDataApropos() {
+  const response = await fetch(process.env.PUBLIC_URL + "/data/apropos.json");
+  const data = await response.json();
+  return data;
+}
+
+export { getAllLogement, getOneLogement, getDataApropos };

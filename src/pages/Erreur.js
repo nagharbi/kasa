@@ -10,7 +10,7 @@ function Error (props) {
             <div className="error-container">
                <div className="error-code">{props.code}</div>  
                <span className="error-info">{message}</span>
-               <NavLink className="error-link" to="/" exact="true">
+               <NavLink className="error-link" to="/">
                     Retourner sur la page d’accueil
                </NavLink>
             </div>

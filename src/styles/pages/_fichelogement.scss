@@ -56,27 +56,24 @@
     }
 }
 
-.house-content {
-    display: flex;
-    flex-direction: column;
-    margin-right: pxToRem(50px);
-}
-
 .house-title {
     font-family: $font-family;
     color: $color-primary;
     font-size: pxToRem(18px);
+    width: pxToRem(335px);
     margin-bottom: pxToRem(10px);
     @include tablet {
-        font-size: pxToRem(30px);
-        height: pxToRem(40px);
+        width: 100%;
+        font-size: pxToRem(36px);
     }
 }
 
 .house-position {
     font-family: $font-family;
+    font-weight: 500;
     color: $color-primary;
     font-size: pxToRem(14px);
+    margin-bottom: pxToRem(10px);
     @include tablet {
         font-size: pxToRem(18px);
     }

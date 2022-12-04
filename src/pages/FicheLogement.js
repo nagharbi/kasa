@@ -36,10 +36,8 @@ function FicheLogement() {
         <div className="house">
           <div className="house-tags">
             <div className="house-content">
-              <span className="house-title">
-                {logement.title}
-              </span>
-              <span className="house-position">{logement.location}</span>
+              <div className="house-title">{logement.title}</div>
+              <div className="house-position">{logement.location}</div>
             </div>
             <div className="tag-container">
               {logement.tags ? logement.tags.map((content, index) => <Tag key={index} content={content} />) : null}
@@ -55,8 +53,8 @@ function FicheLogement() {
           </div>
         </div>
         <div className="accordeon-container">
-          <Accordeon id="accordeon1" title="Déscription" content={logement.description} small/>
-          <Accordeon id="accordeon2" title="Equipement" content={logement.equipments} small/>
+          <Accordeon id="description" title="Dèscription" content={logement.description} small size="size-m" />
+          <Accordeon id="equipments" title="Equipements" content={logement.equipments} small size="size-m" />
         </div>
       </div>
     </div>

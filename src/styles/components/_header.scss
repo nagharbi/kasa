@@ -37,9 +37,15 @@
         height: auto;
     }
 }
+
+.menu-active
+{
+    border-bottom: 2px solid $color-primary;
+}
+
 .logo > img {
-width: pxToRem(120px);
-height: pxToRem(47px);
+    width: pxToRem(120px);
+    height: pxToRem(47px);
     @include tablet{
         width: pxToRem(150px);
         height: pxToRem(60px);

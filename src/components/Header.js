@@ -6,16 +6,16 @@ function Header() {
     return (
         <div className='navbar'>
 
-            <NavLink className='logo' to="/" exact="true">
+            <NavLink className='logo' to="/">
                 <img alt= "logo-kasa" src={logo}/>
             </NavLink>
 
             <ul className='menu'>
                 <li className='menu-link'>
-                   <NavLink to="/" exact="true">Acceuil</NavLink>
+                   <NavLink className={({ isActive }) => isActive ? 'menu-active' : undefined } to="/">Acceuil</NavLink>
                 </li>
                 <li className='menu-link'>
-                <NavLink to="/apropos">A propos</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'menu-active' : undefined } to="/apropos">A propos</NavLink>
                 </li>
             </ul>
         </div>
