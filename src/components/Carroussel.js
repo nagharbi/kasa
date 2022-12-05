@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import left from "../images/arrow-left.png";
 import right from "../images/arrow-right.png";
 
@@ -11,9 +11,28 @@ function Carousel(props) {
         if (current === props.imgs.length) {
             current = 0;
         }
-        setCurrentImg(props.imgs[current])
+        setCurrentImg(props.imgs[current]);
         setIndex(current);
     }
+
+    function onPrev() {
+        let current = index - 1;
+        if (index === 0) {
+            current = props.imgs.length - 1;
+        }
+        setCurrentImg(props.imgs[current]);
+        setIndex(current);
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            onNext();
+        }, 3000);
+
+        return () => {
+            clearInterval(interval);
+        }
+    });
 
     return (
         <div className="carroussel">
@@ -21,7 +40,7 @@ function Carousel(props) {
                 <img className="carroussel-img" src={currentImg} />
             </div>
             <div className="carroussel-controls">
-                <img src={left} className="carroussel-controls-img" alt="arrow left" />
+                <img onClick={onPrev} src={left} className="carroussel-controls-img" alt="arrow left" />
                 <img onClick={onNext} src={right} className="carroussel-controls-img" alt="arrow right" />
             </div>
             <div className="carroussel-counter">{index +1 }/4</div>

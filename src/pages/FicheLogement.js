@@ -34,28 +34,26 @@ function FicheLogement() {
           <div className="house-tags">
             <div className="house-content">
               <span className="house-title">
-                Cozy loft on the Canal Saint-Martin
+                {logement.title}
               </span>
-              <span className="house-position">Paris, Île-de-France</span>
+              <span className="house-position">{logement.location}</span>
             </div>
             <div className="tag-container">
-              <Tag content="Cozy" />
-              <Tag content="Canal" />
-              <Tag content="Paris 10" />
+              {logement.tags ? logement.tags.map((content, index) => <Tag key={index} content={content} />) : null}
             </div>
           </div>
           <div className="house-stars">
             <div className="stars-container">
-              <Stars rating="4" total="5" />
+              <Stars rating={logement.rating} total="5" />
             </div>
             <div className="avatar-container">
-              <Avatar title="Alexandre Dumas" />
+              <Avatar name={logement?.host?.name} picture={logement?.host?.picture} />
             </div>
           </div>
         </div>
         <div className="accordeon-container">
-          <Accordeon id="accordeon1" title="Description" content={content} />
-          <Accordeon id="accordeon2" title="Test" content={content} />
+          <Accordeon id="accordeon1" title="Déscription" content={logement.description} small/>
+          <Accordeon id="accordeon2" title="Equipement" content={logement.equipments} small/>
         </div>
       </div>
     </div>

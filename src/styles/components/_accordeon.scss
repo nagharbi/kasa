@@ -4,14 +4,17 @@
     z-index: -1;
 }
 
+.accordeon-small {
+    @include tablet {
+        width: pxToRem(740px) !important;
+    }
+}
+
 .accordeon {
     width: 100%;
     color: white;
     overflow: hidden;
     margin-bottom: pxToRem(20px);
-    @include tablet {
-        width: pxToRem(740px);
-    }
     &-label {
         display: flex;
         justify-content: space-between;
