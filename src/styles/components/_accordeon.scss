@@ -23,6 +23,7 @@
         background-color: $color-primary;
         font-size: pxToRem(13px);
         border-radius: pxToRem(5px);
+        font-family: $font-family;
         @include tablet {
             border-radius: pxToRem(10px);
             font-size: pxToRem(18px);
