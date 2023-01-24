@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // navlink est utilisé lorsque on veut mettre surbrillance le lien actuel ou activé
 import logo from '../images/header-logo.svg';
 
 function Header() {

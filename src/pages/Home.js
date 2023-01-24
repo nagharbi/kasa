@@ -7,7 +7,7 @@ import { getAllLogement } from'../services/service';
 
 function Home() {
     const [logements, setLogements] = useState([]);
-
+    // useEffect indique a react qui va effectuer un recupération des logements.
     useEffect(()=> {
         async function load() {
             const data = await getAllLogement();
@@ -22,7 +22,8 @@ function Home() {
             <Banniere img={homeImg} title="Chez vous, " subtitle ="partout et ailleurs" />
             <div className='thumb-main'>
                 <div className='thumb-container'>
-                    {logements.map((item) => <Thumb key={item.id} id={item.id} title={item.title} img={item.cover}/>)}
+                    {/* map() : iterer sur les données et retournée chaque logement dans thumb  */}
+                    {logements.map((logement ) => <Thumb key={logement.id} id={logement.id} title={logement.title} img={logement.cover}/>)}
                 </div>
             </div>
         </div>

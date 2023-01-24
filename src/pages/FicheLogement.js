@@ -11,12 +11,14 @@ import { getOneLogement } from "../services/service";
 function FicheLogement() {
   const params = useParams();
   const id = params.id;
-  const [logement, setlogement] = useState({});
+  // useNavigate pour la redirection de la page
   const navigate = useNavigate();
+  const [logement, setlogement] = useState({});
 
   useEffect(() => {
     async function load() {
       const data = await getOneLogement(id);
+      console.log(data);
       if (data) {
         setlogement(data)
       } else {
@@ -29,8 +31,9 @@ function FicheLogement() {
   return (
     <div>
       <Header />
+
       <div className="house-container">
-        <div className="house-carousel">
+      <div className="house-carousel">
           {logement.pictures ? <Carroussel imgs={logement.pictures} /> : <></>}
         </div>
         <div className="house">
@@ -53,6 +56,7 @@ function FicheLogement() {
           </div>
         </div>
         <div className="accordeon-container">
+          {/* le paramétre small pour mettre l'accordeon en petite taille  */}
           <Accordeon id="description" title="Dèscription" content={logement.description} small size="size-m" />
           <Accordeon id="equipments" title="Equipements" content={logement.equipments} small size="size-m" />
         </div>

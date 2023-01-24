@@ -1,3 +1,4 @@
+// fonction creer pour l'appel API
 async function getAllLogement() {
   const response = await fetch(process.env.PUBLIC_URL + "/data/logement.json");
   const data = await response.json();

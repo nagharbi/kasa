@@ -59,7 +59,7 @@
     }
 }
 
-.accordeon-checkbox.checked {
+.accordeon-checkbox.open {
     + .accordeon-label {
         &::after {
           transform: rotate(180deg);

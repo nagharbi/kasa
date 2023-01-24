@@ -1,6 +1,7 @@
 .thumb {
     @include tablet {
-        margin-right: pxToRem(70px);
+        margin-right: pxToRem(35px);
+        margin-left: pxToRem(35px);
         margin-bottom: pxToRem(70px);
     }
 }
@@ -9,7 +10,7 @@
     width: 90%;
     border-radius: pxToRem(25px);
     @include tablet {
-        margin: pxToRem(20px) auto;
+        margin: pxToRem(40px) auto;
         background: #F7F7F7;
     }
 }
@@ -17,7 +18,8 @@
 .thumb-container {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: pxToRem(35px);
+    padding-right: pxToRem(15px);
+    padding-top: pxToRem(40px);
     @include tablet {
         justify-content: center;
     }
@@ -31,9 +33,10 @@
     background-size: cover;
     border-radius: pxToRem(15px);
     position: relative;
-    margin-left: pxToRem(20px);
+    margin-left: pxToRem(30px);
     margin-top: pxToRem(20px);
     @include tablet {
+        margin-left: pxToRem(20px);
         width: pxToRem(400px);
         height: pxToRem(400px);
     }
@@ -55,8 +58,9 @@
     font-family: $font-family;
     font-weight: 500;
     font-size: pxToRem(18px);
-    width: pxToRem(300px);
+    width: pxToRem(240px);
     height: pxToRem(52px);
     left: pxToRem(20px);
+    bottom: pxToRem(10px);
     z-index: 1;
 }

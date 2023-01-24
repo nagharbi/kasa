@@ -22,6 +22,7 @@ function Apropos() {
             <Banniere img={imgapropos}/>
             <div className="apropos-container">
                 <div className="accordeon-container">
+                    {/* map(): iteration sur les donnée et retournée les donnée dans un accordeon */}
                     {aproposList.map((item, index) => <Accordeon key={index} id={item.id} title={item.title} content={item.content} size="size-l" />)}
                 </div>
             </div>
